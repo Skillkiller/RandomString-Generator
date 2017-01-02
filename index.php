@@ -23,16 +23,16 @@
 					<div class="form-group">
 						<label for="zeilen">Zeilen</label>
 						<output class="pull-right"  name="anzeige1">10000</output>
-						<input class="form-control" oninput="anzeige1.value=zeilen.value" id="zeilen" name="zeilen" type="range" min="0" max="1000000" step="1000" value="10000">
+						<input class="form-control" oninput="anzeige1.value=zeilen.value" id="zeilen" name="zeilen" type="range" min="0" max="10000" step="1000" value="10000">
 					</div>
 					<div class="form-group">
 						<label for="zeilenl">Zeilenlänge</label>
 						<output class="pull-right"  name="anzeige2">10000</output>
-						<input input class="form-control" oninput="anzeige2.value=zeilenl.value" id="zeilenl" name="zeilenl" type="range" min="0" max="1000000" step="1000" value="10000">
+						<input input class="form-control" oninput="anzeige2.value=zeilenl.value" id="zeilenl" name="zeilenl" type="range" min="0" max="10000" step="1000" value="10000">
 					</div>
 					<div class="form-group">
 						<label for="inputZeichen">Erlaubte Zeichen</label>
-						<input class="form-control" name="zeichen" id="inputZeichen" placeholder="abc..ABC" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789" type="email">
+						<input class="form-control" name="zeichen" id="inputZeichen" placeholder="abc..ABC" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789" type="text">
 						<p class="help-block col-sm-10">Es sind alle Zeichen möglich z.B.: +-*/</p>
 					</div>
 				</div>
