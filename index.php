@@ -1,5 +1,8 @@
 <html>
 	<head>
+	<?php
+	include(__DIR__ . "/config/config.php");
+	?>
 	<meta charset="utf-8">
 	
 	<link rel="stylesheet" href="https://almsaeedstudio.com/themes/AdminLTE/dist/css/AdminLTE.min.css">
@@ -22,13 +25,13 @@
 				<div class="box-body">
 					<div class="form-group">
 						<label for="zeilen">Zeilen</label>
-						<output class="pull-right"  name="anzeige1">10000</output>
-						<input class="form-control" oninput="anzeige1.value=zeilen.value" id="zeilen" name="zeilen" type="range" min="0" max="10000" step="1000" value="10000">
+						<output class="pull-right"  name="anzeige1"><?php echo $wertzeilen; ?></output>
+						<input class="form-control" oninput="anzeige1.value=zeilen.value" id="zeilen" name="zeilen" type="range" min="0" max="<?php echo $maxzeilen; ?>" step="<?php echo $zeilenstep; ?>" value="<?php echo $wertzeilen; ?>">
 					</div>
 					<div class="form-group">
 						<label for="zeilenl">Zeilenlänge</label>
-						<output class="pull-right"  name="anzeige2">10000</output>
-						<input input class="form-control" oninput="anzeige2.value=zeilenl.value" id="zeilenl" name="zeilenl" type="range" min="0" max="10000" step="1000" value="10000">
+						<output class="pull-right"  name="anzeige2"><?php echo $wertzeilenl; ?></output>
+						<input input class="form-control" oninput="anzeige2.value=zeilenl.value" id="zeilenl" name="zeilenl" type="range" min="0" max="<?php echo $maxzeilenl; ?>" step="<?php echo $zeilenlstep; ?>" value="<?php echo $wertzeilenl; ?>">
 					</div>
 					<div class="form-group">
 						<label for="inputZeichen">Erlaubte Zeichen</label>
