@@ -38,6 +38,7 @@ if (isset($_POST["zeilenl"]) and $_POST["zeilenl"] > $maxzeilenl) {
 }
 
 
+
 $data = fopen("config/data.txt", 'r+');
 $line = fgets($data);
 	
@@ -122,13 +123,14 @@ if (!$fehler > 0) {
 			<div class="box box-info">
 				<div class="box-header with-border">
 					<h3 class="box-title">Datei erstellt</h3>
+					<a href="index.php"><button type="submit" class="btn btn-info pull-right">Zurück</button></a>
 				</div>
 				<div class="box-body">
 					<a href="<?php echo $pfad . $Name; ?>"  download="<?php echo $Name; ?>" style="text-decoration:none"><div class="info-box bg-yellow">
 						<span class="info-box-icon"><i class="fa fa-calendar"></i></span>
 
 						<div class="info-box-content">
-							<span class="info-box-text">Dateinen erstellt</span>
+							<span class="info-box-text">Datei<?php if ($dateinenzahl > 1) {echo "nen"; } ?> erstellt</span>
 							<span class="info-box-number"><?php echo $dateinenzahl; ?></span>
 
 							<div class="progress">
