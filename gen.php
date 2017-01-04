@@ -113,6 +113,14 @@ if (!$fehler > 0) {
 	$end = time();
 	$laufzeit = $end - $start;
 	
+
+	
+	if (isset($_POST["api"]) and $_POST["api"] == 1) {
+		echo substr($_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'], 0, -7).$pfad . $Name;
+		
+		exit;
+	}
+	
 	$prozent = $laufzeit/$maxtime * 100;
 	
 	
