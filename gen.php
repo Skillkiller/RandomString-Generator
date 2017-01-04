@@ -113,6 +113,12 @@ if (!$fehler > 0) {
 	$end = time();
 	$laufzeit = $end - $start;
 	
+	if (!isset($_POST["api"] and $_POST["api"]) {
+		echo $pfad . $Name;
+		
+		exit;
+	}
+	
 	$prozent = $laufzeit/$maxtime * 100;
 	
 	
