@@ -1,0 +1,12 @@
+deny from all
+
+ErrorDocument 403 /HTTP403.php
+
+
+<Files *.txt>
+Satisfy any
+</Files>
+
+<Files HTTP403.php>
+Satisfy any
+</Files>
