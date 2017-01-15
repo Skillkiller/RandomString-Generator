@@ -92,7 +92,7 @@ if (!$fehler > 0) {
  
 	foreach ($alledateien as $datei) { // Ausgabeschleife
 		if ($datei != "." && $datei != ".."  && $datei != "_notes") { 
-			if (intval(substr("$datei", 8, 10)) < strtotime('now - 1 hour'))
+			if (intval(substr("$datei", 8, 10)) < strtotime('now - 1 hour') and substr ("$datei", -4) == ".txt")
 			unlink("created/".$datei);
 		}
 	};
