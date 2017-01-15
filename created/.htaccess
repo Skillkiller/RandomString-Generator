@@ -3,6 +3,14 @@ deny from all
 ErrorDocument 403 /HTTP403.php
 
 
+
+<FilesMatch "\.(?i:txt)$">
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</FilesMatch>
+
+
+
 <Files *.txt>
 Satisfy any
 </Files>
